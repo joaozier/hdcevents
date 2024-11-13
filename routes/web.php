@@ -3,7 +3,12 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    $nome = "Pedro";
+    $arr = [1,2,3,4,5];
+    return view('welcome',
+        [   'nome'=>$nome, 
+            'profissao' => "Programador",
+            'arr'=>$arr]);
 });
 
 Route::get('/painel', function () {
